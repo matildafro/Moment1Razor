@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Start";
+}
+
+<div>
+    <h1>Start</h1>
+   <p>Välkommen till min lösning av Moment 1.1 i kursen Webbutveckling med .NET. Jag har skapat lösningen i Visual Studio. Jag tycker Razor var roligt att jobba med. Det jag bråkade mest med var att få till 
+       en active-klass på länkarna i navigeringen. Jag löste detta genom lite klassisk JavaScript och har på varje sida lagt in ett script som lägger till en klass när vald sida är aktiv. <br /><br />
+       Då JavaScript även skulle användas via en fil, använde jag site.js i js-mappen. Här i la jag en funktion för att visa en knapp som scrollar en till toppen om man scrollat ner 20px från sidans topp. Denna funktion används på sidan Razor, som har längst text.</p>
+</div>
+
+
+@section Scripts
+    {
+    <script>
+
+        $('#linkHome').removeClass('notactive');
+        $('#linkHome').addClass('active');
+    </script>
+}
+

@@ -1,0 +1,17 @@
+﻿@page
+@model Moment1Razor.Pages.AboutModel
+@{
+	ViewData["Title"] = "Om sidan";
+}
+
+<h1>Om sidan</h1>
+<p>Jag som skapat sidan heter Matilda Fröberg. Jag är 27 år och bor i underbara Gröndal i Stockholm. Utöver att sitta framför min dator hela dagarna brukar jag även ha tid för lite träning, kompisar och att jobba extra som leverantör av matkassar. Sedan september har mina dagar blivit mycket roligare då jag skaffat mig katten Herman. </p>
+
+@section Scripts
+    {
+        <script>
+
+            $('#linkAbout').removeClass('notactive');
+        $('#linkAbout').addClass('active');
+        </script>
+}

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Moment 1 - Razor Pages</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Moment1Razor.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    @{
+        DateTime todaysdate = DateTime.Now;
+        var daysdate = todaysdate.ToString("yyyy/MM/dd");
+    }
+
+    <header>
+        <div>
+
+			<a asp-area="" asp-page="/Index"><img src="img/razorlogo.png" alt="Logotyp" /> </a>
+		</div>
+       <div class="right"><p>Dagens datum är: @(daysdate)</p></div>
+    </header>
+    <hr />
+    <nav>
+        
+
+            <div>
+                <ul class="nobullets">
+
+                <li class="listitem notactive">
+                        <a id="linkHome" asp-area="" asp-page="/Index">Start</a>
+                    </li>
+                <li class="listitem notactive">
+                        <a id="linkRazor" asp-area="" asp-page="/Razor">Razor</a>
+                    </li>
+                <li class="listitem notactive">
+                        <a id="linkAbout" asp-area="" asp-page="/About">Om sidan</a>
+				</li>
+		
+                </ul>
+           
+        </div>
+    </nav>
+
+    <div>
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="borderaround">
+           <p>Av Matilda Fröberg - Kontakta mig via epost: mafr2109@student.miun.se</p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: true)
+</body>
+</html>
